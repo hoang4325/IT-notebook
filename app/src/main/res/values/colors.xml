@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#FF1313EC</color>
+    <color name="primary_dark">#FF0E0EB8</color>
+    <color name="primary_light">#FF4D7CFF</color>
+    <color name="error">#FFDC2626</color>
+
+    <color name="colorBackground">#FFF6F6F8</color>
+    <color name="colorSurface">#FFFFFFFF</color>
+    <color name="colorSurfaceCode">#FFEEF0F8</color>
+    <color name="colorTextPrimary">#FF1E1B4B</color>
+    <color name="colorTextSecondary">#FF5C5C8A</color>
+    <color name="colorTextHint">#FF9AA0C4</color>
+    <color name="colorTextCode">#FF1313EC</color>
+    <color name="colorIconInactive">#FF9AA0C4</color>
+    <color name="colorChipBackground">#FFE6E8F5</color>
+    <color name="colorStatusBar">#FFF6F6F8</color>
+
+    <color name="star_active">#FFFFD700</color>
+
+    <color name="topic_blue">#FF4D7CFF</color>
+    <color name="topic_green">#FF4CAF50</color>
+    <color name="topic_orange">#FFFF9800</color>
+    <color name="topic_red">#FFFF6B6B</color>
+    <color name="topic_purple">#FF9C27B0</color>
+    <color name="topic_teal">#FF00ACC1</color>
+    <color name="topic_pink">#FFE91E63</color>
+    <color name="topic_indigo">#FF5C6BC0</color>
+
+    <color name="nav_active">#FF4D7CFF</color>
+    <color name="nav_inactive">#FF8890B5</color>
+
+    <color name="bg_dark">@color/colorBackground</color>
+    <color name="bg_light">@color/colorBackground</color>
+    <color name="surface_card">@color/colorSurface</color>
+    <color name="surface_dark">@color/colorSurface</color>
+    <color name="surface_code">@color/colorSurfaceCode</color>
+    <color name="text_primary_light">@color/colorTextPrimary</color>
+    <color name="text_primary_dark">@color/colorTextPrimary</color>
+    <color name="text_secondary">@color/colorTextSecondary</color>
+    <color name="text_hint">@color/colorTextHint</color>
+    <color name="text_code">@color/colorTextCode</color>
+    <color name="icon_inactive">@color/colorIconInactive</color>
+</resources>
