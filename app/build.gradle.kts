@@ -1,15 +1,15 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.application)
 }
 
 android {
-    namespace = "com.tien.it_notebook_app"
+    namespace = "com.it_notebook_app"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.tien.it_notebook_app"
+        applicationId = "com.it_notebook_app"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

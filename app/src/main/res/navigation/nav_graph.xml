@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.tien.it_notebook_app.ui.home.HomeFragment"
+        android:name="com.it_notebook_app.ui.home.HomeFragment"
         android:label="Home">
         <action
             android:id="@+id/action_home_to_search"
@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/savedFragment"
-        android:name="com.tien.it_notebook_app.ui.saved.SavedFragment"
+        android:name="com.it_notebook_app.ui.saved.SavedFragment"
         android:label="Saved">
         <action
             android:id="@+id/action_saved_to_formulaDetail"
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="com.tien.it_notebook_app.ui.search.SearchFragment"
+        android:name="com.it_notebook_app.ui.search.SearchFragment"
         android:label="Search">
         <action
             android:id="@+id/action_search_to_formulaDetail"
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.tien.it_notebook_app.ui.settings.SettingsFragment"
+        android:name="com.it_notebook_app.ui.settings.SettingsFragment"
         android:label="Settings">
         <action
             android:id="@+id/action_settings_to_manageTopics"
@@ -59,7 +59,7 @@
     <!-- Topic Detail -->
     <fragment
         android:id="@+id/topicDetailFragment"
-        android:name="com.tien.it_notebook_app.ui.topic.TopicDetailFragment"
+        android:name="com.it_notebook_app.ui.topic.TopicDetailFragment"
         android:label="Topic Detail">
         <argument
             android:name="topicId"
@@ -76,7 +76,7 @@
     <!-- Formula Detail -->
     <fragment
         android:id="@+id/formulaDetailFragment"
-        android:name="com.tien.it_notebook_app.ui.formula.FormulaDetailFragment"
+        android:name="com.it_notebook_app.ui.formula.FormulaDetailFragment"
         android:label="Formula Detail">
         <argument
             android:name="formulaId"
@@ -90,7 +90,7 @@
     <!-- Add/Edit Formula -->
     <fragment
         android:id="@+id/addEditFormulaFragment"
-        android:name="com.tien.it_notebook_app.ui.formula.AddEditFormulaFragment"
+        android:name="com.it_notebook_app.ui.formula.AddEditFormulaFragment"
         android:label="Add Formula">
         <argument
             android:name="formulaId"
@@ -105,7 +105,7 @@
     <!-- Manage Topics -->
     <fragment
         android:id="@+id/manageTopicsFragment"
-        android:name="com.tien.it_notebook_app.ui.topic.ManageTopicsFragment"
+        android:name="com.it_notebook_app.ui.topic.ManageTopicsFragment"
         android:label="Manage Topics">
         <action
             android:id="@+id/action_manageTopics_to_topicDetail"
