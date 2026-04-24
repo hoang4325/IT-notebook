@@ -1,0 +1,25 @@
+# ===== IDE =====
+.idea/
+*.iml
+
+# ===== Gradle =====
+.gradle/
+build/
+app/build/
+
+# ===== Local config =====
+local.properties
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Native build =====
+.externalNativeBuild/
+.cxx/
+
+# ===== Logs =====
+*.log
+
+# ===== Captures =====
+captures/
