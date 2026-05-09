@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.formula;
+package com.it_notebook_app.ui.formula;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;

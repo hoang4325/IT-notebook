@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.utils;
+package com.it_notebook_app.utils;
 
 import androidx.room.TypeConverter;
 

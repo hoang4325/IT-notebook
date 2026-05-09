@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.home;
+package com.it_notebook_app.ui.home;
 
 import android.app.Application;
 

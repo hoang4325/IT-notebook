@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app;
+package com.it_notebook_app;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;

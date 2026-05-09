@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.search;
+package com.it_notebook_app.ui.search;
 
 import android.os.Bundle;
 import android.text.Editable;

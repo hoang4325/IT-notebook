@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.topic;
+package com.it_notebook_app.ui.topic;
 
 import android.os.Bundle;
 

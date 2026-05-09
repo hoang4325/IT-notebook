@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.data.repository;
+package com.it_notebook_app.data.repository;
 
 import android.app.Application;
 

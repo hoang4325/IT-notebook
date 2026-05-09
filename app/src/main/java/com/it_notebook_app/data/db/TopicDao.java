@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.data.db;
+package com.it_notebook_app.data.db;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;

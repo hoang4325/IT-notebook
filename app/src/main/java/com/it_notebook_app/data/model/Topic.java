@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.data.model;
+package com.it_notebook_app.data.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

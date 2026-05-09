@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.adapter;
+package com.it_notebook_app.ui.adapter;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;

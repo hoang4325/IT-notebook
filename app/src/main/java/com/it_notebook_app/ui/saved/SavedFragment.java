@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.saved;
+package com.it_notebook_app.ui.saved;
 
 import android.os.Bundle;
 import android.view.View;

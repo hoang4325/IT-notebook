@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.history;
+package com.it_notebook_app.ui.history;
 
 /**
  * This fragment is no longer used.

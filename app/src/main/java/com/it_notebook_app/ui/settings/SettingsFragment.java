@@ -1,4 +1,4 @@
-﻿package com.it_notebook_app.ui.settings;
+package com.it_notebook_app.ui.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
