@@ -15,6 +15,8 @@ navigation = "2.9.7"
 recyclerview = "1.4.0"
 gson = "2.13.2"
 roomCommonJvm = "2.8.4"
+okhttp = "4.12.0"
+markwon = "4.6.2"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -38,6 +40,10 @@ recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version
 # Gson (for TypeConverters)
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
+# OkHttp (Gemini REST API)
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+# Markwon (render Markdown trong TextView)
+markwon-core = { group = "io.noties.markwon", name = "core", version.ref = "markwon" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

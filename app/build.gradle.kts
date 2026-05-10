@@ -1,4 +1,4 @@
-﻿plugins {
+plugins {
     alias(libs.plugins.android.application)
 }
 
@@ -33,6 +33,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -55,6 +56,10 @@ dependencies {
     implementation(libs.recyclerview)
 
     implementation(libs.gson)
+
+    // AI & Networking
+    implementation(libs.okhttp)
+    implementation(libs.markwon.core)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
