@@ -14,64 +14,69 @@ import java.util.List;
 @Dao
 public interface FormulaDao {
 
-       @Query("SELECT * FROM formulas WHERE topicId = :topicId ORDER BY title ASC")
-       LiveData<List<Formula>> getAllByTopic(int topicId);
+    // ─── Queries ──────────────────────────────────────────────────────────────
 
-       @Query("SELECT * FROM formulas WHERE topicId = :topicId ORDER BY lastViewedAt DESC")
-       LiveData<List<Formula>> getAllByTopicRecent(int topicId);
+    @Query("SELECT * FROM formulas ORDER BY title ASC")
+    LiveData<List<Formula>> getAll();
 
-       @Query("SELECT * FROM formulas WHERE isFavorite = 1 ORDER BY title ASC")
-       LiveData<List<Formula>> getFavorites();
+    @Query("SELECT * FROM formulas WHERE topicId = :topicId ORDER BY title ASC")
+    LiveData<List<Formula>> getAllByTopic(int topicId);
 
-       @Query("SELECT * FROM formulas WHERE isFavorite = 1 AND topicId = :topicId ORDER BY title ASC")
-       LiveData<List<Formula>> getFavoritesByTopic(int topicId);
+    @Query("SELECT * FROM formulas WHERE topicId = :topicId ORDER BY lastViewedAt DESC")
+    LiveData<List<Formula>> getAllByTopicRecent(int topicId);
 
-       @Query("SELECT * FROM formulas WHERE lastViewedAt > 0 ORDER BY lastViewedAt DESC LIMIT 5")
-       LiveData<List<Formula>> getRecentlyViewed();
+    @Query("SELECT * FROM formulas WHERE isFavorite = 1 ORDER BY title ASC")
+    LiveData<List<Formula>> getFavorites();
 
-       @Query("SELECT * FROM formulas WHERE id = :id")
-       LiveData<Formula> getById(int id);
+    @Query("SELECT * FROM formulas WHERE isFavorite = 1 AND topicId = :topicId ORDER BY title ASC")
+    LiveData<List<Formula>> getFavoritesByTopic(int topicId);
 
-       @Query("SELECT * FROM formulas ORDER BY title ASC")
-       LiveData<List<Formula>> getAll();
+    @Query("SELECT * FROM formulas WHERE lastViewedAt > 0 ORDER BY lastViewedAt DESC LIMIT 5")
+    LiveData<List<Formula>> getRecentlyViewed();
 
-       @Query("SELECT * FROM formulas WHERE title LIKE '%' || :keyword || '%' " +
-                     "OR content LIKE '%' || :keyword || '%' " +
-                     "OR explanation LIKE '%' || :keyword || '%' " +
-                     "ORDER BY title ASC")
-       LiveData<List<Formula>> searchByKeyword(String keyword);
+    @Query("SELECT * FROM formulas WHERE id = :id")
+    LiveData<Formula> getById(int id);
 
-       @Query("SELECT * FROM formulas WHERE (title LIKE '%' || :keyword || '%' " +
-                     "OR content LIKE '%' || :keyword || '%' " +
-                     "OR explanation LIKE '%' || :keyword || '%') " +
-                     "AND tags LIKE '%' || :tag || '%' " +
-                     "ORDER BY title ASC")
-       LiveData<List<Formula>> searchByKeywordAndTag(String keyword, String tag);
+    @Query("SELECT * FROM formulas WHERE id = :id")
+    Formula getByIdSync(int id);
 
-       @Query("SELECT * FROM formulas WHERE id = :id")
-       Formula getByIdSync(int id);
+    @Query("SELECT * FROM formulas WHERE title LIKE '%' || :keyword || '%' "
+            + "OR content LIKE '%' || :keyword || '%' "
+            + "OR explanation LIKE '%' || :keyword || '%' "
+            + "ORDER BY title ASC")
+    LiveData<List<Formula>> searchByKeyword(String keyword);
 
-       @Insert
-       long insert(Formula formula);
+    @Query("SELECT * FROM formulas WHERE (title LIKE '%' || :keyword || '%' "
+            + "OR content LIKE '%' || :keyword || '%' "
+            + "OR explanation LIKE '%' || :keyword || '%') "
+            + "AND tags LIKE '%' || :tag || '%' "
+            + "ORDER BY title ASC")
+    LiveData<List<Formula>> searchByKeywordAndTag(String keyword, String tag);
 
-       @Update
-       void update(Formula formula);
+    /** Lấy tất cả lastViewedAt >= mốc thời gian — dùng để tính heatmap. */
+    @Query("SELECT lastViewedAt FROM formulas WHERE lastViewedAt >= :sinceTimestamp")
+    List<Long> getActivitySince(long sinceTimestamp);
 
-       @Delete
-       void delete(Formula formula);
+    // ─── Counts ───────────────────────────────────────────────────────────────
 
-       @Query("DELETE FROM formulas WHERE id = :id")
-       void deleteById(int id);
+    @Query("SELECT COUNT(*) FROM formulas WHERE topicId = :topicId")
+    int getFormulaCountByTopic(int topicId);
 
-       @Query("UPDATE formulas SET isFavorite = :isFavorite WHERE id = :id")
-       void setFavorite(int id, boolean isFavorite);
+    // ─── Mutations ────────────────────────────────────────────────────────────
 
-       @Query("UPDATE formulas SET lastViewedAt = :timestamp WHERE id = :id")
-       void updateLastViewedAt(int id, long timestamp);
+    @Insert  long insert(Formula formula);
+    @Update  void update(Formula formula);
+    @Delete  void delete(Formula formula);
 
-       @Query("UPDATE formulas SET lastViewedAt = 0")
-       void clearRecentlyViewed();
+    @Query("DELETE FROM formulas WHERE id = :id")
+    void deleteById(int id);
 
-       @Query("SELECT COUNT(*) FROM formulas WHERE topicId = :topicId")
-       int getFormulaCountByTopic(int topicId);
+    @Query("UPDATE formulas SET isFavorite = :isFavorite WHERE id = :id")
+    void setFavorite(int id, boolean isFavorite);
+
+    @Query("UPDATE formulas SET lastViewedAt = :timestamp WHERE id = :id")
+    void updateLastViewedAt(int id, long timestamp);
+
+    @Query("UPDATE formulas SET lastViewedAt = 0")
+    void clearRecentlyViewed();
 }

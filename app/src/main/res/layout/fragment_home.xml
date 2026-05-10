@@ -211,6 +211,79 @@
 
             </LinearLayout>
 
+            <!-- ═══════════════════════════════ -->
+            <!-- HEATMAP: Biểu đồ hoạt động học  -->
+            <!-- ═══════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📊 Hoạt động học tập"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvHeatmapStreak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ngày liên tiếp 🔥"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <com.it_notebook_app.ui.views.HeatmapView
+                android:id="@+id/heatmapView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="8dp"/>
+
+            <!-- Chú thích màu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|end"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ít"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="10sp"
+                    android:layout_marginEnd="4dp"/>
+
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#1A1A2E" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#0D4A2F" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#166534" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#16A34A" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="10dp" android:layout_height="10dp"
+                    android:background="#4ADE80" android:layout_marginEnd="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhiều"
+                    android:textColor="@color/colorTextHint"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTopics"
                 android:layout_width="match_parent"

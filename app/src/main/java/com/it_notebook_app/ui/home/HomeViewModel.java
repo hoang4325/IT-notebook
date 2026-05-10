@@ -60,4 +60,11 @@ public class HomeViewModel extends AndroidViewModel {
             formulaCounts.postValue(counts);
         });
     }
+
+    /**
+     * Lấy dữ liệu heatmap: Map<"yyyyMMdd", count> của 365 ngày gần nhất.
+     */
+    public void getActivityMap(java.util.function.Consumer<Map<String, Integer>> callback) {
+        formulaRepository.getActivityMap(callback);
+    }
 }
